@@ -26,11 +26,13 @@ const ChatModal = () => {
 
   return (
     <Modal show={isOpened} onHide={closeHandler} centered>
-      <ContentComponent
-        closeHandler={closeHandler}
-        changed={changed}
-        allChannels={allChannels}
-      />
+      {ContentComponent && (
+        <ContentComponent
+          closeHandler={closeHandler}
+          changed={changed}
+          allChannels={allChannels}
+        />
+      )}
     </Modal>
   );
 };
